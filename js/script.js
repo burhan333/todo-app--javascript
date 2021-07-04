@@ -38,6 +38,8 @@ function editItem(e)
     console.log(val);
 }
 
+// DELETE FUNCTION
+
 function deleteItem(e)
 {
     e.parentNode.remove();
