@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.main
+{
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.todo 
+{
+    width: 340px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 0px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+}
+
+.todo_title
+{
+    color: #55BDCA;
+}
+
+.todo_input-section
+{
+    position: relative;
+}
+
+.todo_input
+{
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 60px;
+    outline: none;
+}
+
+.todo_add
+{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border: none;
+    height: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #55BDCA;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    width: 60px;
+}
+
+.todo_tasks ul
+{
+    padding: 0;
+}
+
+.todo_tasks ul li
+{
+    list-style-type: none;
+    text-align: left;
+    background: #d1ebfd;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    position: relative;
+}
+
+.todo_edit
+{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border: none;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #55BDCA;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    width: 60px;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.todo_delete
+{
+    position: absolute;
+    right: 60px;
+    top: 0;
+    border: none;
+    height: 100%;
+    background: #96CAEF;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    width: 60px;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.todo_tasks ul li:hover > button
+{
+    opacity: 1;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.todo_delete-all 
+{
+    right: 0px;
+    top: 0;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    background: #55BDCA;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.todo_tasks 
+{
+    margin: 30px 0;
+}
+
+.todo_head 
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

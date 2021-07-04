@@ -15,14 +15,14 @@ function add()
         // DELETE BUTTON
         const delBtn = document.createElement('button');
         const delBtnTxt = document.createTextNode('Delete');
-        delBtn.setAttribute('class', 'btn');
+        delBtn.setAttribute('class', 'todo_delete');
         delBtn.setAttribute('onclick', 'deleteItem(this)');
         delBtn.appendChild(delBtnTxt)
     
         // EDIT BUTTON
         const editBtn = document.createElement('button');
         const editBtnTxt = document.createTextNode('Edit');
-        editBtn.setAttribute('class', 'btn');
+        editBtn.setAttribute('class', 'todo_edit');
         editBtn.setAttribute('onclick', 'editItem(this)');
         editBtn.appendChild(editBtnTxt)
     
