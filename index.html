@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>TODO APP</title>
 </head>
-<body>
-    
-    <div>
-        <input id="input" type="text" placeholder="Add Item">
-        <button onclick="add()">ADD</button>
-        <button onclick="deleteAll()">DELETE ALL</button>
-    </div>
-
-    <div>
-        <ul id="list"></ul>
+<body>    
+    <div class="main">
+        <div class="todo">
+            <div class="todo_head">
+                <h3 class="todo_title">Todo App</h3>
+            </div>
+            <div class="todo_input-section">
+                <input class="todo_input" id="input" type="text" placeholder="Add Item">
+                <button class="todo_add" onclick="add()">ADD</button>
+            </div>
+            <div class="todo_tasks">
+                <ul id="list"></ul>
+            </div>
+            <div class="todo_footer">
+                <button class="todo_delete" onclick="deleteAll()">DELETE ALL</button>
+            </div>
+        </div>
     </div>
 
     <script src="./js/script.js"></script>
