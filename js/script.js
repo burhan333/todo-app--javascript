@@ -1,0 +1,49 @@
+let list = document.getElementById('list');
+
+function add()
+{
+    let input = document.getElementById('input');
+
+    let li = document.createElement('li');
+    let liText = document.createTextNode(input.value);
+    li.appendChild(liText);
+
+
+    // DELETE BUTTON
+    const delBtn = document.createElement('button');
+    const delBtnTxt = document.createTextNode('Delete');
+    delBtn.setAttribute('class', 'btn');
+    delBtn.setAttribute('onclick', 'deleteItem(this)');
+    delBtn.appendChild(delBtnTxt)
+
+    // EDIT BUTTON
+    const editBtn = document.createElement('button');
+    const editBtnTxt = document.createTextNode('Edit');
+    editBtn.setAttribute('class', 'btn');
+    editBtn.setAttribute('onclick', 'editItem(this)');
+    editBtn.appendChild(editBtnTxt)
+
+    li.appendChild(delBtn);
+    li.appendChild(editBtn);
+
+    list.appendChild(li);
+    input.value = '';
+}
+
+function editItem(e)
+{
+    let val = e.parentNode.firstChild;
+    let editValue = prompt('Enter Eidt Value', val.nodeValue);
+    val.nodeValue = editValue;
+    console.log(val);
+}
+
+function deleteItem(e)
+{
+    e.parentNode.remove();
+}
+
+function deleteAll()
+{
+    list.innerHTML = '';
+}
