@@ -1,34 +1,42 @@
 let list = document.getElementById('list');
 
+// ADD TODO ON CLICK
+
 function add()
 {
     let input = document.getElementById('input');
 
-    let li = document.createElement('li');
-    let liText = document.createTextNode(input.value);
-    li.appendChild(liText);
+    if (input.value)
+    {
+        let li = document.createElement('li');
+        let liText = document.createTextNode(input.value);
+        li.appendChild(liText);
+    
+        // DELETE BUTTON
+        const delBtn = document.createElement('button');
+        const delBtnTxt = document.createTextNode('Delete');
+        delBtn.setAttribute('class', 'btn');
+        delBtn.setAttribute('onclick', 'deleteItem(this)');
+        delBtn.appendChild(delBtnTxt)
+    
+        // EDIT BUTTON
+        const editBtn = document.createElement('button');
+        const editBtnTxt = document.createTextNode('Edit');
+        editBtn.setAttribute('class', 'btn');
+        editBtn.setAttribute('onclick', 'editItem(this)');
+        editBtn.appendChild(editBtnTxt)
+    
+        li.appendChild(delBtn);
+        li.appendChild(editBtn);
+    
+        list.appendChild(li);
+        input.value = '';
+    }
 
-
-    // DELETE BUTTON
-    const delBtn = document.createElement('button');
-    const delBtnTxt = document.createTextNode('Delete');
-    delBtn.setAttribute('class', 'btn');
-    delBtn.setAttribute('onclick', 'deleteItem(this)');
-    delBtn.appendChild(delBtnTxt)
-
-    // EDIT BUTTON
-    const editBtn = document.createElement('button');
-    const editBtnTxt = document.createTextNode('Edit');
-    editBtn.setAttribute('class', 'btn');
-    editBtn.setAttribute('onclick', 'editItem(this)');
-    editBtn.appendChild(editBtnTxt)
-
-    li.appendChild(delBtn);
-    li.appendChild(editBtn);
-
-    list.appendChild(li);
-    input.value = '';
+    console.log(input.value)
 }
+
+// EDIT TASK
 
 function editItem(e)
 {
@@ -38,12 +46,14 @@ function editItem(e)
     console.log(val);
 }
 
-// DELETE FUNCTION
+// DELETE TASK
 
 function deleteItem(e)
 {
     e.parentNode.remove();
 }
+
+// DELETE ALL TASK
 
 function deleteAll()
 {
